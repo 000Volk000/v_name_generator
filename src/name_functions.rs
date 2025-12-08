@@ -37,11 +37,11 @@ pub fn is_valid_name(name: String) -> bool {
         return false;
     }
 
-    // Posible combinations of letters
-    let dual_char = ['p', 'b', 'v', 'f', 'c', 'g', 't', 'd'];
+    // Any consonant should be followed by vowel r or l
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
     let dual_partners = ['a', 'e', 'i', 'o', 'u', 'r', 'l'];
     for i in 0..(name.len() - 1) {
-        if dual_char.contains(
+        if !vowels.contains(
             &name
                 .chars()
                 .nth(i)
