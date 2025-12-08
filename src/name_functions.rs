@@ -13,12 +13,6 @@ fn how_many_vowels(name: String) -> i8 {
     n
 }
 
-fn is_vowel(letter: char) -> bool {
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-
-    vowels.contains(&letter)
-}
-
 pub fn generate_random_name(size: i8, rng: &mut ThreadRng) -> String {
     let mut name = String::new();
     name.push('V');
@@ -32,8 +26,28 @@ pub fn generate_random_name(size: i8, rng: &mut ThreadRng) -> String {
 }
 
 pub fn is_valid_name(name: String) -> bool {
+    // Minimum number of vowels of the global name
     if how_many_vowels(name.clone()) < ((name.len() as i8 - 1) / 2) {
         return false;
+    }
+
+    // Posible combinations of letters
+    let dual_char = ['p', 'b', 'v', 'f', 'c', 'g', 't', 'd'];
+    let dual_partners = ['a', 'e', 'i', 'o', 'u', 'r', 'l'];
+    for i in 0..(name.len() - 1) {
+        if dual_char.contains(
+            &name
+                .chars()
+                .nth(i)
+                .expect("Something wrong happened getting the char i of name"),
+        ) && !dual_partners.contains(
+            &name
+                .chars()
+                .nth(i + 1)
+                .expect("Something wrong happened getting the char i+1 of name"),
+        ) {
+            return false;
+        }
     }
 
     true
