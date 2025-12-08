@@ -13,6 +13,12 @@ fn how_many_vowels(name: String) -> i8 {
     n
 }
 
+fn is_vowel(letter: char) -> bool {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    vowels.contains(&letter)
+}
+
 pub fn generate_random_name(size: i8, rng: &mut ThreadRng) -> String {
     let mut name = String::new();
     name.push('V');
