@@ -13,6 +13,12 @@ fn how_many_vowels(name: String) -> i8 {
     n
 }
 
+fn is_vowel(letter: char) -> bool {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    vowels.contains(&letter)
+}
+
 pub fn generate_random_name(size: i8, rng: &mut ThreadRng) -> String {
     let mut name = String::new();
     name.push('V');
@@ -46,6 +52,24 @@ pub fn is_valid_name(name: String) -> bool {
                 .nth(i + 1)
                 .expect("Something wrong happened getting the char i+1 of name"),
         ) {
+            return false;
+        }
+    }
+
+    // Check for vowel every max 3 letters
+    let mut windows = 1;
+    for i in 1..name.len() {
+        if is_vowel(
+            name.chars()
+                .nth(i)
+                .expect("Something wrong happened getting the char i+1 of name"),
+        ) {
+            windows = 2
+        } else {
+            windows -= 1;
+        }
+
+        if windows < 0 {
             return false;
         }
     }
