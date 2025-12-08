@@ -38,12 +38,10 @@ pub fn is_valid_name(name: String) -> bool {
     }
 
     // Any consonant should be followed by vowel r or l
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
     let dual_partners = ['a', 'e', 'i', 'o', 'u', 'r', 'l'];
     for i in 0..(name.len() - 1) {
-        if !vowels.contains(
-            &name
-                .chars()
+        if !is_vowel(
+            name.chars()
                 .nth(i)
                 .expect("Something wrong happened getting the char i of name"),
         ) && !dual_partners.contains(
