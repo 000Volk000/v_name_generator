@@ -22,7 +22,7 @@ fn is_vowel(letter: char) -> bool {
 pub fn generate_random_name(size: i8, rng: &mut ThreadRng) -> String {
     let mut name = String::new();
     name.push('V');
-    let letters_size = ('z' as u32) - ('a' as u32);
+    let letters_size = ('z' as u32) - ('a' as u32) + 1;
 
     for _ in 0..size {
         name.push(((('a' as u32) + (rng.random::<u32>() % letters_size)) as u8).into());
