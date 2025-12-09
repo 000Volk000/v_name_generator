@@ -4,5 +4,3 @@ WORKDIR /app
 COPY . /app
 
 RUN cargo install
-
-CMD ["v_name_generator", "ntfy"]
