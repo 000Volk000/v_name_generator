@@ -3,6 +3,10 @@ name = "v_name_generator"
 version = "0.1.0"
 edition = "2024"
 
+description = "This is a project that generate a procedural name from 4/6 of length and starting by the letter V, it also sends a ntfy post"
+license = "MIT"
+repository = "https://github.com/000Volk000/v_name_generator"
+
 [dependencies]
 dotenv = "0.15.0"
 rand = "0.9.2"
