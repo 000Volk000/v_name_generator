@@ -7,8 +7,14 @@ use std::env;
 use crate::name_functions::{generate_random_name, is_valid_name};
 
 async fn send_ntfy(name: String) -> Result<Response, reqwest::Error> {
-    dotenv().expect("Couldn load the .env");
-    let ntfy = env::var("NTFY_POST_URL").expect("Couldn't find the NTFY_POST_URL on the .env");
+    match env::var("NTFY_POST_URL") {
+        Ok(_) => println!("The enviroment key is already on the coputer"),
+        Err(_) => {
+            dotenv().expect("Couldn load the .env");
+        }
+    }
+    let ntfy =
+        env::var("NTFY_POST_URL").expect("Couldn't find the NTFY_POST_URL on the enviroment");
 
     let response = reqwest::Client::new()
         .post(ntfy)
