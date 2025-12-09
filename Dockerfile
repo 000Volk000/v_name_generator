@@ -4,3 +4,5 @@ WORKDIR /app
 COPY . /app
 
 RUN cargo install --path /app
+
+CMD ["sleep", "infinity"]
