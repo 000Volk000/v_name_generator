@@ -9,12 +9,12 @@ on:
 env:
   DOCKER_BUILDKIT: 1
 
-  IMAGE_NAME: ghcr.io/000Volk000/v_name_generator
+  IMAGE_NAME: ghcr.io/000volk000/v_name_generator
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.repository == '000Volk000/v_name_generator'
+    if: github.event_name == 'push' && github.repository == '000volk000/v_name_generator'
     permissions:
       contents: read
       packages: write
@@ -45,7 +45,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          target: historia_automovilismo
+          target: v_name_generator
           tags: |
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:main
