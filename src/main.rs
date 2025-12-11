@@ -16,15 +16,13 @@ async fn send_ntfy(name: String) -> Result<Response, reqwest::Error> {
     let ntfy =
         env::var("NTFY_POST_URL").expect("Couldn't find the NTFY_POST_URL on the enviroment");
 
-    let response = reqwest::Client::new()
+    reqwest::Client::new()
         .post(ntfy)
         .body(format!("The new name is: {}", name.to_owned()))
         .header("Title", "New V-Name Generated")
         .header("Tags", "rotating_light")
         .send()
-        .await?;
-
-    Ok(response)
+        .await
 }
 
 #[tokio::main]
