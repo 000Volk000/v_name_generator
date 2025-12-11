@@ -38,10 +38,10 @@ async fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() > 1 && args.get(1).expect("Error geting the 1 arg") == "ntfy" {
-        match send_ntfy(name).await {
-            Ok(response) => println!("ntfy sent correctly\nResponse code: {}", response.status()),
-            Err(e) => println!("Something wrong happened sending the ntfy\nError: {e}"),
-        }
+        let response = send_ntfy(name)
+            .await
+            .expect("Something wrong happened sending the ntfy");
+        println!("ntfy sent correctly\nResponse code: {}", response.status());
     } else {
         println!("{}", name);
     }
