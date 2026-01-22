@@ -1,6 +1,11 @@
 [package]
 name = "v_name_generator"
 version = "0.1.0"
+repository = "https://github.com/000volk000/v_name_generator"
+homepage = "https://github.com/000volk000/v_name_generator"
+description = "A short, v-starting name generator compatible with cli, ntfy, etc..."
+authors = ["Darío Martínez Kostyuk <dariomartk@gmail.com>"]
+license = "MIT"
 edition = "2024"
 
 [dependencies]
