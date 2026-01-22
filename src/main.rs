@@ -21,8 +21,7 @@ async fn send_ntfy(name: String) -> Result<Response, reqwest::Error> {
         .await
 }
 
-#[tokio::main]
-async fn main() {
+pub fn generate_valid_name() -> String {
     let mut rng = rand::rng();
     let letter_number = 3 + (rng.random::<i8>() % 3).abs();
     let mut name = generate_random_name(letter_number, &mut rng);
@@ -30,6 +29,13 @@ async fn main() {
     while !is_valid_name(name.clone()) {
         name = generate_random_name(letter_number, &mut rng);
     }
+
+    name
+}
+
+#[tokio::main]
+async fn main() {
+    let name = generate_valid_name();
 
     let args: Vec<String> = env::args().collect();
 
