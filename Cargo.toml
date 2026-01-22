@@ -1,6 +1,6 @@
 [package]
 name = "v_name_generator"
-version = "1.0.1"
+version = "1.0.2"
 repository = "https://github.com/000volk000/v_name_generator"
 homepage = "https://github.com/000volk000/v_name_generator"
 description = "A short, v-starting name generator compatible with cli, ntfy, etc..."
