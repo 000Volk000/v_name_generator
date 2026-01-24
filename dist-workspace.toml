@@ -13,6 +13,8 @@ cargo-dist-version = "0.30.3"
 ci = "github"
 # The installers to generate for each app
 installers = ["shell", "powershell", "homebrew"]
+# Compile all the needed dependencies
+features = ["app"]
 # A GitHub repo to push Homebrew formulas to
 tap = "000Volk000/homebrew-v_name_generator"
 # Target platforms to build apps for (Rust target-triple syntax)
