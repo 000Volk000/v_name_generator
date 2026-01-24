@@ -3,6 +3,6 @@ FROM rust:1.91.1 AS v_name_generator
 WORKDIR /app
 COPY . /app
 
-RUN cargo install --path /app
+RUN cargo install --path /app --features="app"
 
 CMD ["sleep", "infinity"]
