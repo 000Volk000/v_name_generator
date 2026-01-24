@@ -51,7 +51,7 @@ brew install 000Volk000/v_name_generator/v_name_generator
 If you have [Rust](https://rust-lang.org/) installed, you can get it directly from [crates.io](https://crates.io/):
 
 ```bash
-cargo install v_name_generator
+cargo install v_name_generator --features="app"
 ```
 
 Or build it from the repository:
@@ -59,7 +59,7 @@ Or build it from the repository:
 ```bash
 git clone https://github.com/000Volk000/v_name_generator.git
 cd v_name_generator
-cargo install --path .
+cargo install --path . --features="app"
 ```
 
 ## Usage

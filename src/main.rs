@@ -1,10 +1,7 @@
-mod name_functions;
 use dotenv::dotenv;
-use rand::Rng;
 use reqwest::Response;
 use std::env;
-
-use crate::name_functions::{generate_random_name, is_valid_name};
+use v_name_generator::generate_valid_name;
 
 async fn send_ntfy(name: String) -> Result<Response, reqwest::Error> {
     let ntfy = env::var("NTFY_POST_URL").unwrap_or_else(|_| {
@@ -19,18 +16,6 @@ async fn send_ntfy(name: String) -> Result<Response, reqwest::Error> {
         .header("Tags", "rotating_light")
         .send()
         .await
-}
-
-pub fn generate_valid_name() -> String {
-    let mut rng = rand::rng();
-    let letter_number = 3 + (rng.random::<i8>() % 3).abs();
-    let mut name = generate_random_name(letter_number, &mut rng);
-
-    while !is_valid_name(name.clone()) {
-        name = generate_random_name(letter_number, &mut rng);
-    }
-
-    name
 }
 
 #[tokio::main]
