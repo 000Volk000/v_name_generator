@@ -1,0 +1,31 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+## [1.0.5] - 2026-01-22
+
+### ⚙️ Miscellaneous Tasks
+
+- Release v1.0.2
+## [1.0.4] - 2026-01-22
+
+### 💼 Other
+
+- *(deps)* Bump actions/checkout from 4 to 6 ([#2](https://github.com/000Volk000/v_name_generator/pull/2))
+- *(deps)* Bump docker/build-push-action from 5 to 6 ([#3](https://github.com/000Volk000/v_name_generator/pull/3))
+- *(deps)* Bump reqwest from 0.12.25 to 0.13.1 ([#4](https://github.com/000Volk000/v_name_generator/pull/4))
+- *(deps)* Bump actions/download-artifact from 4 to 7 ([#5](https://github.com/000Volk000/v_name_generator/pull/5))
+- *(deps)* Bump actions/upload-artifact from 4 to 6 ([#6](https://github.com/000Volk000/v_name_generator/pull/6))
+- *(deps)* Bump docker/setup-buildx-action from 1 to 3 ([#7](https://github.com/000Volk000/v_name_generator/pull/7))
+- *(deps)* Bump tokio from 1.48.0 to 1.49.0 ([#8](https://github.com/000Volk000/v_name_generator/pull/8))
+
+### ⚙️ Miscellaneous Tasks
+
+- Release 1.0.1
+- Release 1.0.2
+- Release 1.0.3
+- Release 1.0.4
