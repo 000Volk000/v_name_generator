@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [1.2.1] - 2026-01-26
+
+### 💼 Other
+
+- *(deps)* Bump actions/checkout from 4 to 6 ([#16](https://github.com/000Volk000/v_name_generator/pull/16))
+- *(deps)* Bump actions/upload-artifact from 4 to 6 ([#17](https://github.com/000Volk000/v_name_generator/pull/17))
 ## [1.2.0] - 2026-01-24
 
 ### 🚀 Features
