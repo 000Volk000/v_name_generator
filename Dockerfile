@@ -1,4 +1,4 @@
-FROM rust:1.91.1 AS v_name_generator
+FROM rust:1.91.1 AS v-name-generator
 
 WORKDIR /app
 COPY . /app
