@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [1.3.2] - 2026-02-27
+
+### 💼 Other
+
+- *(deps)* Bump actions/upload-artifact from 4 to 6 ([#23](https://github.com/000Volk000/v_name_generator/pull/23))
+- *(deps)* Bump actions/checkout from 4 to 6 ([#24](https://github.com/000Volk000/v_name_generator/pull/24))
+- *(deps)* Bump docker/build-push-action from 5 to 6 ([#25](https://github.com/000Volk000/v_name_generator/pull/25))
+- *(deps)* Bump reqwest from 0.13.1 to 0.13.2 ([#27](https://github.com/000Volk000/v_name_generator/pull/27))
+- *(deps)* Bump rand from 0.9.2 to 0.10.0 ([#28](https://github.com/000Volk000/v_name_generator/pull/28))
+- *(deps)* Bump actions/upload-artifact from 6 to 7 ([#29](https://github.com/000Volk000/v_name_generator/pull/29))
+- *(deps)* Bump actions/download-artifact from 4 to 8 ([#30](https://github.com/000Volk000/v_name_generator/pull/30))
 ## [1.3.1] - 2026-01-31
 
 ### ⚙️ Miscellaneous Tasks
