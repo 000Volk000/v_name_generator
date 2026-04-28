@@ -16,7 +16,7 @@ app = ["dep:dotenv", "dep:reqwest", "dep:tokio"]
 rand = "0.10.1"
 
 dotenv = { version = "0.15.0", optional = true }
-reqwest = { version = "0.13.2", optional = true }
+reqwest = { version = "0.13.3", optional = true }
 tokio = { version = "1.52.1", features = ["macros", "rt-multi-thread"], optional = true }
 
 [[bin]]
